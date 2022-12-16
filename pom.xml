@@ -5,37 +5,36 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.asgarov</groupId>
-  <artifactId>fintech</artifactId>
+  <artifactId>regnology-interview</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>fintech-interview</name>
+  <name>regnology-interview</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>18</maven.compiler.source>
     <maven.compiler.target>18</maven.compiler.target>
-    <junit-jupiter-engine.version>5.9.0</junit-jupiter-engine.version>
-    <junit-platform-runner.version>1.9.0</junit-platform-runner.version>
+    <junit-jupiter.version>5.9.1</junit-jupiter.version>
+    <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>${junit-jupiter-engine.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <version>${junit-jupiter-engine.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-runner</artifactId>
-      <version>${junit-platform-runner.version}</version>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit-jupiter.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
